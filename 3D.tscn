@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://teapot.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://rotate.gd" type="Script" id=2]
+
+[sub_resource type="SpatialMaterial" id=1]
+metallic = 0.56
+metallic_specular = 0.76
+roughness = 0.0
+
+[node name="Main" type="Spatial"]
+
+[node name="teapot" type="MeshInstance" parent="."]
+mesh = ExtResource( 1 )
+material/0 = SubResource( 1 )
+script = ExtResource( 2 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.932412, 0.361397, 0, -0.361397, 0.932412, 0, 3.92151, 9.12656 )
